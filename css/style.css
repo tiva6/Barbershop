@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #11110f;
+    color: #f4f1e9;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+}
+
+:root {
+    --background: #11110f;
+    --dark: #11110f;
+    --card: #1b1b18;
+    --border: #35352f;
+    --muted: #99988f;
+    --cream: #f4f1e9;
+    --accent: #d6ff4d;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1150px, calc(100% - 40px));
+    margin: auto;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+.eyebrow {
+    color: #88877f;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Oswald", sans-serif;
+}
+
+h1 {
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+}
+
+h1 span,
+h2 span {
+    color: #77766e;
+}
+
+h2 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+
+/* NAV */
+
+.navbar {
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #aaa9a1;
+    font-size: 0.85rem;
+}
+
+.nav-button {
+    background: var(--cream);
+    color: #111 !important;
+    padding: 11px 18px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+
+/* HERO */
+
+.hero {
+    padding: 110px 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 520px;
+    color: var(--muted);
+    margin: 30px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-flex;
+    padding: 15px 22px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.primary {
+    background: var(--accent);
+    color: #111;
+}
+
+.secondary {
+    border: 1px solid var(--border);
+}
+
+.hero-image {
+    min-height: 560px;
+    background: #242420;
+    padding: 25px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 510px;
+    background: #33332e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #77766e;
+}
+
+.image-placeholder strong {
+    font-family: "Oswald", sans-serif;
+    font-size: 5rem;
+    color: #aaa9a0;
+    line-height: 1;
+}
+
+
+/* SERVICES */
+
+.services {
+    background: #181816;
+}
+
+.section-heading {
+    margin-bottom: 65px;
+}
+
+.service-list {
+    border-top: 1px solid var(--border);
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.service > div {
+    display: grid;
+    grid-template-columns: 50px 220px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.service .number {
+    color: #66655f;
+    font-size: 0.7rem;
+}
+
+.service h3 {
+    font-size: 1.3rem;
+}
+
+.service p {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.service > strong {
+    color: var(--accent);
+}
+
+
+/* ABOUT */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.about-box {
+    aspect-ratio: 1;
+    background: var(--accent);
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-box strong {
+    font-family: "Oswald", sans-serif;
+    font-size: 8rem;
+    line-height: 1;
+}
+
+.about-content > p:not(.eyebrow) {
+    max-width: 600px;
+    color: var(--muted);
+    margin-top: 25px;
+}
+
+
+/* HOURS */
+
+.hours {
+    background: #e9e6dc;
+    color: #111;
+}
+
+.hours-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.hours-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.hours-info h3 {
+    margin-bottom: 20px;
+}
+
+.hours-info p {
+    color: #66645d;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.hours-info p span {
+    float: right;
+    color: #111;
+}
+
+
+/* BOOKING */
+
+.booking {
+    background: var(--accent);
+    color: #111;
+    text-align: center;
+}
+
+.booking-container {
+    max-width: 800px;
+}
+
+.booking .eyebrow {
+    color: #555;
+}
+
+.booking h2 span {
+    color: #555;
+}
+
+.booking-container > p:not(.eyebrow) {
+    max-width: 450px;
+    margin: 25px auto 30px;
+    color: #444;
+}
+
+.light {
+    background: #111;
+    color: white;
+}
+
+
+/* CONTACT */
+
+.contact {
+    border-top: 1px solid var(--border);
+}
+
+.contact > div > p:not(.eyebrow) {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--border);
+}
+
+.footer-container {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #66655f;
+    font-size: 0.7rem;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .hero-container,
+    .about-container,
+    .hours-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        min-height: 400px;
+    }
+
+    .image-placeholder {
+        min-height: 350px;
+    }
+
+    .service > div {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .service p {
+        grid-column: 2;
+    }
+
+    .hours-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .section {
+        padding: 85px 0;
+    }
+
+    nav a:not(.nav-button) {
+        display: none;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .service {
+        align-items: flex-start;
+    }
+
+    .service > div {
+        grid-template-columns: 30px 1fr;
+    }
+
+    .service > strong {
+        font-size: 0.9rem;
+    }
+
+    .about-box strong {
+        font-size: 6rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px 0;
+        gap: 8px;
+    }
+
+}
